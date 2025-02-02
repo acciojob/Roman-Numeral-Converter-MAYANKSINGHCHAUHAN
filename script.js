@@ -25,6 +25,6 @@ function convertNumber() {
     } else if (number === 0) {
         resultElement.textContent = "Roman numerals do not have a representation for zero.";
     } else {
-        resultElement.textContent = `Roman numeral: ${convertToRoman(number)}`;
+        resultElement.textContent = convertToRoman(number); // Removed "Roman numeral:" from output
     }
 }
