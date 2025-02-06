@@ -8,7 +8,7 @@ document.getElementById("convertBtn").addEventListener("click", function () {
   }
 
   const romanNumeral = convertToRoman(parseInt(numberInput));
-  resultElement.textContent = `Roman Numeral: ${romanNumeral}`;
+  resultElement.textContent = romanNumeral; // Display only the Roman numeral
 });
 
 function convertToRoman(num) {
