@@ -4,48 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roman Numeral Converter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        .output {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Roman Numeral Converter</h1>
-    <input type="number" id="number" placeholder="Enter a number" min="0" max="100000">
-    <button onclick="convertToRoman()">Convert</button>
-    <div class="output" id="output"></div>
-    
-    <script>
-        function convertToRoman(num) {
-            if (num < 0 || num > 100000) {
-                document.getElementById("output").innerText = "Number out of range";
-                return;
-            }
-            
-            const romanNumerals = [
-                ["M", 1000], ["CM", 900], ["D", 500], ["CD", 400],
-                ["C", 100], ["XC", 90], ["L", 50], ["XL", 40],
-                ["X", 10], ["IX", 9], ["V", 5], ["IV", 4], ["I", 1]
-            ];
-            
-            let result = "";
-            for (let [symbol, value] of romanNumerals) {
-                while (num >= value) {
-                    result += symbol;
-                    num -= value;
-                }
-            }
-            
-            document.getElementById("output").innerText = result;
-        }
-    </script>
+    <div class="container">
+        <h1>Roman Numeral Converter</h1>
+        <input type="number" id="inputNumber" placeholder="Enter a number" min="0" max="100000" />
+        <button onclick="convert()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
